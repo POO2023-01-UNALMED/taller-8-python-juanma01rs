@@ -1,4 +1,3 @@
-from msilib.schema import SelfReg
 from deportista import Deportista
 from persona import Persona
 
@@ -6,9 +5,9 @@ class Futbolista(Persona, Deportista):
     
     _listaFutbolistas = []
     
-    def __init__(self, golesMarcados, tarjetasRojas, piernaHabil):
-        Persona.__init(self)
-        Deportista.__init(self)
+    def __init__(self, nombre, edad, altura, sexo, deporte, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
+        Persona.__init(self, nombre, edad, altura, sexo)
+        Deportista.__init(self, deporte, añosPracticando)
         self._golesMarcados = golesMarcados
         self._tarjetasRojas = tarjetasRojas
         self._piernaHabil = piernaHabil
