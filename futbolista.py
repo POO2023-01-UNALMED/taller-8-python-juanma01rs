@@ -14,7 +14,7 @@ class Futbolista(Persona, Deportista):
         Futbolista._listaFutbolistas.append(self)
         
     def __str__(self):
-        str = "Mi nombre es " + self.getNombre() + " soy profesional en el deporte " + self.getDeporte() + " Tengo " + self.getEdad() + " años de edad y llevo " + self.getAñosPracticando() + " años en el deporte"
+        str = f"Mi nombre es {self.getNombre()} soy profesional en el deporte {self.getDeporte()} Tengo {self.getEdad()} años de edad y llevo {self.getAñosPracticando()} años en el deporte"
         return str   
     
     def setGolesMarcados(self, golesMarcados):    
