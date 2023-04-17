@@ -1,13 +1,13 @@
-from deportista import Deportista
 from persona import Persona
+from deportista import Deportista
 
 class Futbolista(Persona, Deportista):
     
     _listaFutbolistas = []
     
     def __init__(self, nombre, edad, altura, sexo, deporte, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
-        super().__init__(self, nombre, edad, altura, sexo)
-        super().__init__(self, deporte, añosPracticando)
+        Persona.__init__(self, nombre, edad, altura, sexo)
+        Deportista.__init__(self, deporte, añosPracticando)
         self._golesMarcados = golesMarcados
         self._tarjetasRojas = tarjetasRojas
         self._piernaHabil = piernaHabil
